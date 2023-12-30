@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Hotel Alvestruz</string>
     <string name="login_name">Login</string>
-    <string name="hint_username">Username</string>
-    <string name="hint_password">Password</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_password">Senha</string>
+    <string name="remember_me">Lembrar meu login</string>
 </resources>

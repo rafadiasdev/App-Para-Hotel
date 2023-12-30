@@ -7,6 +7,9 @@ val PurpleGrey80 = Color(0xFFCCC2DC)
 val Pink80 = Color(0xFFEFB8C8)
 
 val Navy = Color(0xFF4682B4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val DarkBlue = Color(0xFF00008b)
+val Indigo = Color(0xFF4b0082)
 
+val BlackBlue = Color(0xFF151E32)
+val MidnightBlue = Color(0xFF191970)
+val DarkSlateGray = Color(0xFF2F4F4F)
