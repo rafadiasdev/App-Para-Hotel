@@ -29,6 +29,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -36,13 +37,14 @@ import com.example.hotelalvestruz.R
 import com.example.hotelalvestruz.screens.components.BorderCard
 import com.example.hotelalvestruz.screens.components.TextFieldPassword
 import com.example.hotelalvestruz.screens.components.TextFieldUsername
+import com.example.hotelalvestruz.screens.components.TopBar
 import com.example.hotelalvestruz.ui.theme.BlackBlue
 
 @Composable
 fun LoginScreen() {
-    var username by remember { mutableStateOf("")}
-    var password by remember { mutableStateOf("")}
-    var remeberCheck by remember { mutableStateOf(false)}
+    var username by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var remeberCheck by remember { mutableStateOf(false) }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -51,10 +53,20 @@ fun LoginScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth(),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            TopBar() {
+            }
+        }
+        Spacer(modifier = Modifier.weight(1f))
         Text(
             text = stringResource(R.string.login_name),
             color = Color.White,
-            fontSize = 30.sp,
+            fontSize = 20.sp,
             fontFamily = FontFamily.SansSerif,
             fontWeight = FontWeight.Bold
         )
@@ -64,7 +76,7 @@ fun LoginScreen() {
                 .padding(all = 24.dp),
             shape = RoundedCornerShape(8.dp),
             borderWidth = 1.dp
-            ) {
+        ) {
             Spacer(modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 50.dp))
             Column(
                 modifier = Modifier.padding(all = 24.dp),
@@ -100,27 +112,26 @@ fun LoginScreen() {
                         checked = remeberCheck,
                         onCheckedChange = {
                             remeberCheck = !remeberCheck
-                        },
+                                },
                         colors = CheckboxDefaults.colors(
-                            checkedColor = BlackBlue,
+                            checkedColor = Color.White,
                             uncheckedColor = Color.White,
-                            checkmarkColor = Color.White
+                            checkmarkColor = Color.Black
                         )
                     )
                     Text(
                         text = stringResource(R.string.remember_me),
-                        fontSize = 14.sp,
-                        color = Color.White
-                    )
-
-                    Spacer(modifier = Modifier.padding(10.dp, 0.dp))
-
-                    Text(
-                        text = stringResource(R.string.forgot_password),
-                        fontSize = 14.sp,
+                        fontSize = 15.sp,
                         color = Color.White
                     )
                 }
+                Text(
+                    text = stringResource(R.string.forgot_password),
+                    fontSize = 15.sp,
+                    color = Color.White,
+                    modifier = Modifier
+                        .padding(0.dp, 10.dp, 0.dp, 10.dp)
+                )
                 Button(
                     onClick = {
 
@@ -130,33 +141,42 @@ fun LoginScreen() {
                         .height(90.dp)
                         .padding(0.dp, 20.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = BlackBlue,
-                        contentColor = Color.White
+                        containerColor = Color.White,
+                        contentColor = Color.Black
                     ),
                     shape = RoundedCornerShape(8.dp)
                 ) {
                     Text(
                         text = stringResource(R.string.txt_button),
                         fontSize = 14.sp,
-                        color = Color.White
+                        color = Color.Black
                     )
                 }
             }
         }
-        Row(
+        Spacer(modifier = Modifier.weight(1f))
+        Column(
             modifier = Modifier,
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
+            verticalArrangement = Arrangement.Bottom,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = "Todos os direitos reservados ₢hotelalvestruz",
-                fontSize = 12.sp,
-                color = Color.White
-            )
+            Row(
+                modifier = Modifier
+                    .padding(20.dp, 0.dp, 20.dp, 20.dp),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = stringResource(R.string.txt_warning),
+                    fontSize = 12.sp,
+                    color = Color.White,
+                    modifier = Modifier,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 }
-
 
 @Composable
 @Preview

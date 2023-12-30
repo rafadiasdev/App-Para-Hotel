@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.hotelalvestruz.ui.theme.DarkSlateGray
+import com.example.hotelalvestruz.ui.theme.BlackBlue
 
 @Composable
 fun BorderCard(
@@ -26,7 +26,7 @@ fun BorderCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(borderWidth),
-            color = DarkSlateGray,
+            color = BlackBlue,
             shape = shape
         ) {
             content()

@@ -6,4 +6,6 @@
     <string name="remember_me">Lembrar meu login</string>
     <string name="forgot_password">Esqueci minha senha</string>
     <string name="txt_button">Login</string>
+    <string name="txt_bar">Hotel e Restaurante</string>
+    <string name="txt_warning">Direitos Reservados © 2023 - Hotel Alvestruz. Todos os direitos reservados. Ao acessar este aplicativo, você concorda com nossos Termos de Uso e Política de Privacidade</string>
 </resources>
