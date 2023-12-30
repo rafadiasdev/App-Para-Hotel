@@ -7,9 +7,13 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.Text
@@ -105,11 +109,50 @@ fun LoginScreen() {
                     )
                     Text(
                         text = stringResource(R.string.remember_me),
-                        fontSize = 15.sp,
+                        fontSize = 14.sp,
+                        color = Color.White
+                    )
+
+                    Spacer(modifier = Modifier.padding(10.dp, 0.dp))
+
+                    Text(
+                        text = stringResource(R.string.forgot_password),
+                        fontSize = 14.sp,
+                        color = Color.White
+                    )
+                }
+                Button(
+                    onClick = {
+
+                    },
+                    modifier = Modifier
+                        .width(200.dp)
+                        .height(90.dp)
+                        .padding(0.dp, 20.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = BlackBlue,
+                        contentColor = Color.White
+                    ),
+                    shape = RoundedCornerShape(8.dp)
+                ) {
+                    Text(
+                        text = stringResource(R.string.txt_button),
+                        fontSize = 14.sp,
                         color = Color.White
                     )
                 }
             }
+        }
+        Row(
+            modifier = Modifier,
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = "Todos os direitos reservados ₢hotelalvestruz",
+                fontSize = 12.sp,
+                color = Color.White
+            )
         }
     }
 }

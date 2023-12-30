@@ -4,4 +4,6 @@
     <string name="hint_username">Usuario</string>
     <string name="hint_password">Senha</string>
     <string name="remember_me">Lembrar meu login</string>
+    <string name="forgot_password">Esqueci minha senha</string>
+    <string name="txt_button">Login</string>
 </resources>
