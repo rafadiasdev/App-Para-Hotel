@@ -1,4 +1,5 @@
 <resources>
+    //Screen_Login
     <string name="app_name">Hotel Alvestruz</string>
     <string name="login_name">Login</string>
     <string name="hint_username">Usuario</string>
@@ -7,5 +8,30 @@
     <string name="forgot_password">Esqueci minha senha</string>
     <string name="txt_button">Login</string>
     <string name="txt_bar">Hotel e Restaurante</string>
+    <string name="txt_main">Quartos</string>
     <string name="txt_warning">Direitos Reservados © 2023 - Hotel Alvestruz. Todos os direitos reservados. Ao acessar este aplicativo, você concorda com nossos Termos de Uso e Política de Privacidade</string>
+
+    //Screen_Main
+    <string name="txt_room1">Quarto Deluxe</string>
+    <string name="txt_room1_description">Quarto espaçoso com vista para o mar</string>
+    <string name="price_room1">R$ 350,00</string>
+
+    <string name="txt_room2">Quarto Superior</string>
+    <string name="txt_room2_description">Quarto elegante com varanda privativa</string>
+    <string name="price_room2">R$ 488,00</string>
+
+    <string name="txt_room3">Suíte Presidencial</string>
+    <string name="txt_room3_description">Luxuosa suíte com serviços exclusivos</string>
+    <string name="price_room3">R$ 560,00</string>
+
+    <string name="txt_room4">Quarto Standard</string>
+    <string name="txt_room4_description">Confortável quarto com todas as comodidades</string>
+    <string name="price_room4">R$ 259,00</string>
+
+    <string name="txt_room5">Quarto Familiar</string>
+    <string name="txt_room5_description">Ideal para famílias com crianças</string>
+    <string name="price_room5">R$ 800,00</string>
+
+    <string name="bt_view_more">Ver Mais</string>
+
 </resources>
